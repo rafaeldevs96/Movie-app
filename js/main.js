@@ -9,6 +9,9 @@ const confirmpassword = document.getElementById("confirmpassword")
 const signupform = document.getElementById("signup-form")
 const passwordError=document.getElementById("password-error")
 const confirmpassowrdError=document.getElementById("confirmpassword-error")
+const btnLogin= document.getElementById("btn-login")
+
+
 
 
 signupform.addEventListener("submit",(e)=>{
@@ -38,18 +41,15 @@ signupform.addEventListener("submit",(e)=>{
         setDoc(UserRef,{
             username: username.value,
             email: email.value,
-            favorites: [],
-            to_wacth: [],
-            watched: []
+            
         })
         .then(()=>{
-            console.log("usuario guardado con exito")
-             username.value=""
-        email.value=""
-        password.value=""
-        confirmpassword.value=""
-        passwordError.value=""
-        confirmpassowrdError.value=""
+            username.value=""
+            email.value=""
+            password.value=""
+            confirmpassword.value=""
+          
+            window.location.href = "dashboard.html";
         })
     })
     .catch((error)=>{
@@ -74,4 +74,6 @@ signupform.addEventListener("submit",(e)=>{
 
 
 
-console.log(app)
+btnLogin.addEventListener("click",(e)=>{
+    window.location.href=("login.html")
+})

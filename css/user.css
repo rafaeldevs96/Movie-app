@@ -1,0 +1,239 @@
+/* --- Estilos Generales --- */
+body {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Título del Usuario --- */
+#userName {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #f0c040;
+    border-bottom: 2px solid #555;
+    padding-bottom: 15px;
+}
+
+/* --- Contenedor Principal (main) --- */
+main {
+    padding: 0 10px;
+}
+
+/* --- Secciones de Lista --- */
+.movie-list-section {
+    margin-bottom: 40px;
+    background-color: #252525;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.movie-list-section h2 {
+    font-size: 1.8em;
+    color: #f0c040;
+    border-bottom: 2px solid #f0c040;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* --- Contenedor de Películas (scroll horizontal) --- */
+.movies-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 10px 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar personalizado */
+.movies-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.movies-container::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.movies-container::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
+/* --- Tarjetas de Películas --- */
+.movie-card {
+    flex: 0 0 250px;
+    width: 250px;
+    background-color: #333333;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #444;
+}
+
+.movie-card h3 {
+    font-size: 1em;
+    color: #f5f5f5;
+    padding: 10px 8px 5px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* --- Descripción (body) --- */
+.movie-body {
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8em;
+    color: #bbb;
+}
+
+/* --- Footer con calificación --- */
+.movie-footer {
+    border-top: 1px solid #444;
+    font-size: 0.85em;
+    color: #f0c040;
+    font-weight: bold;
+    background: #2a2a2a;
+    padding: 8px;
+}
+
+/* --- Botones --- */
+button {
+    background-color: transparent;
+    border: 2px solid #f0c040;
+    color: #f0c040;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #f0c040;
+    color: #1a1a1a;
+}
+
+/* --- Mensajes de Lista Vacía --- */
+.movie-list-section p {
+    color: #aaa;
+    text-align: center;
+    font-style: italic;
+    padding: 20px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 420px) {
+    .movie-card {
+        flex: 0 0 100px;
+        width: 100px;
+    }
+
+    .movie-card img {
+        height: 150px;
+    }
+
+    .movie-card h3 {
+        font-size: 0.7em;
+        padding: 5px 3px;
+    }
+
+    .movie-body {
+        font-size: 0.6em;
+        -webkit-line-clamp: 3;
+    }
+    
+    .movie-footer {
+        font-size: 0.7em;
+        padding: 5px;
+    }
+}
+
+/* nav */
+/* --- Estilos para la barra de navegación --- */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 40px;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el nombre de usuario */
+.nav h2 {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+/* Estilos para los botones del menú */
+.nav button {
+    background-color: transparent;
+    color: #f0c040;
+    border: 2px solid #f0c040;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 10px;
+}
+
+.nav button:hover {
+    background-color: #f0c040;
+    color: #1a1a1a;
+}
+
+/* Agrupamos los botones en un contenedor */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* Responsive para la navegación en móviles */
+@media (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .nav h2 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    .nav-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    .nav button {
+        flex: 1;
+        margin: 0 5px;
+        padding: 8px;
+    }
+}
+

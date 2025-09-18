@@ -1,0 +1,91 @@
+/* Estilos específicos para la página de login */
+
+/* Contenedor que centra todo en la pantalla */
+.container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contenedor del formulario con el color de fondo */
+.login {
+    background-color: #3a3a3a;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Encabezado del formulario */
+.login h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Estilos para el formulario y sus elementos */
+.login form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login label {
+    align-self: flex-start;
+    font-size: 0.9rem;
+    color: #ccc;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+    transition: border-color 0.3s ease;
+}
+
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+    outline: none;
+    border-color: #f0c040; /* Color de acento al enfocar */
+}
+
+/* Mensaje de error */
+#spanError {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    align-self: flex-start;
+    margin-top: -1rem;
+    display: block;
+    text-align: left;
+}
+
+/* Botón de inicio de sesión */
+#btn-login, #btn-register {
+    background-color: #f0c040;
+    color: #1a1a1a;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-login:hover,  #btn-register:hover {
+    background-color: #ffd760;
+}
+
+

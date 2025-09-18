@@ -1,0 +1,104 @@
+/* Estilos específicos para la página de registro */
+
+/* Asegura que el html y body tomen el 100% del alto de la pantalla */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor que centra el formulario en la pantalla */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+/* Título de la página de registro */
+.container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Contenedor del formulario con el color de fondo */
+#signup-form {
+    background-color: #3a3a3a;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Estilos para las etiquetas y campos de entrada */
+#signup-form label {
+    align-self: flex-start;
+    font-size: 0.9rem;
+    color: #ccc;
+    font-weight: 400;
+}
+
+#signup-form input[type="text"],
+#signup-form input[type="email"],
+#signup-form input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+    transition: border-color 0.3s ease;
+}
+
+#signup-form input:focus {
+    outline: none;
+    border-color: #f0c040;
+}
+
+/* Mensajes de error */
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    align-self: flex-start;
+    margin-top: -1rem;
+    display: block;
+    text-align: left;
+}
+
+/* Botón de registro */
+#btn-register, #btn-login {
+    background-color: #f0c040;
+    color: #1a1a1a;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-register:hover {
+    background-color: #ffd760;
+}
+
+
+
+@media(max-width:768px){
+
+    #signup-form{
+        max-width: 250px;
+        
+    }
+   
+}
